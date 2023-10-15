@@ -1,3 +1,15 @@
+'use client';
+import { useEffect } from "react";
+
 export default function HomePage() {
-  return <h1>My first Next Home Page.</h1>;
+  useEffect(()=>{
+    window.alert('Welcome');
+  },[])
+
+  return (
+    <>
+      <h1>Home</h1>
+      <p>This page is for Home</p>
+    </>
+  );
 }
