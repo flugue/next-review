@@ -2,14 +2,35 @@ import Link from "next/link";
 import Heading from "@/components/Heading";
 
 export default function ReviewsPage() {
-    return (
-      <>
-        <Heading>Reviews</Heading>
-        <ul>
-          <li key={1}><Link href='reviews/hollow-knight'>Hollow Knight</Link></li>
-          <li key={1}><Link href='reviews/stardew-valley'>Stardew Valley</Link></li>
-        </ul>
-      </>
-    );
-  }
-  
+  return (
+    <>
+      <Heading>Reviews</Heading>
+      <ul className="flex flex-col gap-3">
+        <li key={1} className="bg-white border rounded shadow w-80 hover:shadow-xl">
+          <Link href="reviews/hollow-knight">
+            <img
+              src="/images/hollow-knight.jpg"
+              alt=""
+              width="320"
+              height="180"
+              className="rounded-t"
+            />
+            <h2 className="py-1 text-center">Hollow Knight</h2>
+          </Link>
+        </li>
+        <li key={2} className="bg-white border rounded shadow w-80 hover:shadow-xl">
+          <Link href="reviews/stardew-valley">
+            <img
+              src="/images/stardew-valley.jpg"
+              alt=""
+              width="320"
+              height="180"
+              className="rounded-t"
+            />
+            <h2 className="py-1 text-center">Hollow Knight</h2>
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
+}
