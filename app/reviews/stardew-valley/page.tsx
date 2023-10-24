@@ -6,7 +6,7 @@ export default function StardewValleyPage() {
         <Heading>Stardew Valley</Heading>
         <img src="/images/stardew-valley.jpg" alt="" 
         width='640' height='360' className="rounded mb-2"/>
-        <p>this is the page for Stardew Valley</p>
+        <p className="font-exo2">this is the page for Stardew Valley</p>
       </>
     );
   }
