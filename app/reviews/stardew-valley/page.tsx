@@ -1,13 +1,21 @@
+import { readFile } from "node:fs/promises";
+import { marked } from "marked";
 import Heading from "@/components/Heading";
 
-export default function StardewValleyPage() {
-    return (
-      <>
-        <Heading>Stardew Valley</Heading>
-        <img src="/images/stardew-valley.jpg" alt="" 
-        width='640' height='360' className="rounded mb-2"/>
-        <p className="font-exo2">this is the page for Stardew Valley</p>
-      </>
-    );
-  }
-  
+export default async function StardewValleyPage() {
+  const text = await readFile("./content/reviews/stardew-valley.md", "utf8");
+  const html = marked(text);
+  return (
+    <>
+      <Heading>Stardew Valley</Heading>
+      <img
+        src="/images/stardew-valley.jpg"
+        alt=""
+        width="640"
+        height="360"
+        className="rounded mb-2"
+      />
+      <article dangerouslySetInnerHTML={{__html:html}}/>
+    </>
+  );
+}
