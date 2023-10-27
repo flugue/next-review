@@ -1,5 +1,5 @@
 import Heading from "@/components/Heading";
-import { getReview } from '@/lib/reviews';
+import { getReview } from '@/lib/ReviewService';
 
 interface ReviewPageProps {
   params: { slug: string };
