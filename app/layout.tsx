@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ReactNode } from "react";
 import './globals.css';
 import NavBar from "@/components/NavBar";

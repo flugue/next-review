@@ -31,8 +31,15 @@ export async function getReviews(): Promise<Review[]> {
 
   for (const slug of slugs) {
     const review = await getReview(slug);
-    console.log("inside the foreach", review);
     reviews.push(review);
   }
   return reviews;
+}
+
+export async function getSlugs(): Promise<string[]> {
+  const files = await readdir("./content/reviews");
+
+  return files
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => f.slice(0, -".md".length));
 }
