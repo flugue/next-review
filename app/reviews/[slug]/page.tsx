@@ -16,7 +16,7 @@ export default async function ReviewDetailPage({params:{slug}}:ReviewPageProps) 
   return (
     <>
       <Heading>{review.title}</Heading>
-      <p>{review.date}</p>
+      <p>{review.date.toDateString()}</p>
       <img
         src={review.image}
         alt=""
